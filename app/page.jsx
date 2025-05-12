@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/navbar";
 import Hero from "@/app/components/hero";
+import WatchList from "@/app/components/watchList";
 
 async function getAnimeData() {
   const res = await fetch("https://api.jikan.moe/v4/top/anime", {
@@ -19,9 +20,10 @@ export default async function Home() {
   const anime = await getAnimeData();
 
   return (
-    <main className="flex">
+    <main>
       <div id="Navbar"><Navbar/></div>
       <Hero anime={anime} />
+      <div><WatchList /></div>
     </main>
   );
 }

@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight, FiLoader } from 'react-icons/fi';
 import { GoDotFill } from "react-icons/go";
 import { FaStar } from "react-icons/fa6";
-import ScrollDownArrow from "@/app/components/ui/ScrollDownArrow";
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,7 +76,7 @@ export default function HeroSection() {
 
   if (error) {
     return (
-      <div className="h-screen w-full flex items-center justify-center bg-gray-900 text-white">
+      <div className="h-screen w-full flex items-center justify-center bg-black text-red-600">
         <p>Error loading trending anime: {error}</p>
       </div>
     );
@@ -85,7 +84,7 @@ export default function HeroSection() {
 
   if (trendingAnime.length === 0) {
     return (
-      <div className="h-screen w-full flex items-center justify-center bg-gray-900 text-white">
+      <div className="h-screen w-full flex items-center justify-center bg-black text-amber-600">
         <p>No trending anime found</p>
       </div>
     );
