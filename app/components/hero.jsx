@@ -1,8 +1,9 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight, FiLoader } from 'react-icons/fi';
 import { GoDotFill } from "react-icons/go";
+import { FaStar } from "react-icons/fa6";
+import ScrollDownArrow from "@/app/components/ui/ScrollDownArrow";
 
 export default function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,7 +27,8 @@ export default function HeroSection() {
             image: anime.images?.jpg?.large_image_url || anime.images?.jpg?.image_url,
             description: anime.synopsis,
             genres: anime.genres?.map(g => g.name) || [],
-            episodes: anime.episodes
+            episodes: anime.episodes,
+            score: anime.score
           })));
         }
       } catch (err) {
@@ -120,7 +122,14 @@ export default function HeroSection() {
     {/* Right (Now): Content */}
     <div className="w-full lg:w-1/2 flex flex-col justify-center items-start ml-8 px-6 md:px-12 lg:px-16 text-white z-10 bg-black">
       <h1 className="text-3xl md:text-5xl font-bold mb-4">{anime.title}</h1>
-      <p className="text-base md:text-lg mb-4 line-clamp-3">{anime.description}</p>
+      <p className="text-base text-gray-300 md:text-lg mb-4 line-clamp-3">{anime.description}</p>
+      {/* Rating */}
+{anime.score && (
+  <div className="flex text-sm text-amber-500 mb-4">
+    <span className='my-auto text-xl'><FaStar /></span>
+    <span className='ml-2'>Rating: <span className="font-semibold">{anime.score}/10</span></span>
+  </div>
+)}
       <div className="flex items-center gap-3 mb-4">
         <span className="px-3 py-1 bg-white/20 rounded-full text-sm">
           EP: {anime.episodes || '?'}
@@ -166,7 +175,7 @@ export default function HeroSection() {
               setIsAutoPlaying(false);
               setTimeout(() => setIsAutoPlaying(true), 10000);
             }}
-            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-pink-600 w-6' : 'bg-white/50'}`}
+            className={`w-3 h-3 rounded-full transition-all ${index === currentIndex ? 'bg-amber-600 w-6' : 'bg-white/25'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
