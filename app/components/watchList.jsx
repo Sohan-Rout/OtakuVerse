@@ -128,7 +128,7 @@ export default function AnimeCarousel() {
                      'grid-cols-1';
 
   return (
-    <section className="relative w-full py-12 bg-black px-4 mx-auto max-w-7xl">
+    <section className="relative w-full py-12 bg-black px-0 z-40 mx-auto max-w-7xl">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-8 px-4">
         <div className="flex items-center gap-2">

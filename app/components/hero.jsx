@@ -91,7 +91,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-100% overflow-hidden">
       {/* Trending Badge */}
       <div className="absolute top-10 left-20 z-20 bg-amber-500 text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
         <div className='flex'>

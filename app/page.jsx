@@ -20,12 +20,11 @@ export default async function Home() {
   const anime = await getAnimeData();
 
   return (
-    <main>
-      <div id="Navbar">
-        <Navbar>
-          <Hero anime={anime} />
-          <div><WatchList /></div>
-        </Navbar>
+    <main className="flex">
+      <div id="Navbar"><Navbar/></div>
+      <div className="w-full">
+        <Hero anime={anime} />
+        <div><WatchList /></div>
       </div>
     </main>
   );
