@@ -21,9 +21,12 @@ export default async function Home() {
 
   return (
     <main>
-      <div id="Navbar"><Navbar/></div>
-      <Hero anime={anime} />
-      <div><WatchList /></div>
+      <div id="Navbar">
+        <Navbar>
+          <Hero anime={anime} />
+          <div><WatchList /></div>
+        </Navbar>
+      </div>
     </main>
   );
 }
