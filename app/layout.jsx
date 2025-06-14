@@ -1,6 +1,5 @@
 import "./globals.css";
 
-// app/layout.js
 export const metadata = {
   title: 'OtakuVerse',
   description: 'Watch anime with style',
