@@ -27,7 +27,7 @@ export default function SearchBar() {
     <>
       <div className="relative w-full max-w-4xl mx-auto px-4">
         {/* Search and Filter Container */}
-        <div className="flex flex-wrap gap-8 items-center justify-between">
+        <div className="flex flex-wrap gap-2 items-center justify-between">
           {/* Search Form */}
           <form onSubmit={handleSearch} className="relative flex-1 min-w-[250px]">
             <div className="relative w-full">
@@ -49,9 +49,9 @@ export default function SearchBar() {
               )}
               <button
                 type="submit"
-                className="absolute right-[24px] top-1/2 transform -translate-y-1/2 bg-amber-500 p-2 rounded-full hover:bg-amber-400 transition-colors"
+                className="absolute right-[5px] top-1/2 transform -translate-y-1/2 bg-amber-500 p-2 rounded-full hover:bg-amber-400 transition-colors"
               >
-                <FiSearch className="text-white text-xl" />
+                <FiSearch className="text-black text-xl" />
               </button>
             </div>
           </form>

@@ -29,25 +29,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/90 backdrop-blur-md py-2 shadow-lg border-b border-amber-400' : 'bg-gray-900/70 py-4'}`}>
+    <nav className="fixed w-full z-50 transition-all py-4 duration-300 bg-gradient-to-b from-zinc-900 to-black">
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold text-amber-400">AnimeHub</span>
+        <Link href="/" className="flex items-center text-white text-2xl font-bold">
+          <span className="text-2xl font-bold text-amber-500">Otaku</span>Verse
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="/trending" className={`nav-link ${pathname === '/trending' ? 'text-amber-400' : 'text-white hover:text-amber-300'}`}>
+          <Link href="/trending" className={`nav-link ${pathname === '/trending' ? 'text-amber-500' : 'text-white hover:text-amber-600'}`}>
             Trending
           </Link>
-          <Link href="/popular" className={`nav-link ${pathname === '/popular' ? 'text-amber-400' : 'text-white hover:text-amber-300'}`}>
+          <Link href="/popular" className={`nav-link ${pathname === '/popular' ? 'text-amber-500' : 'text-white hover:text-amber-600'}`}>
             Popular
           </Link>
-          <Link href="/genres" className={`nav-link ${pathname === '/genres' ? 'text-amber-400' : 'text-white hover:text-amber-300'}`}>
+          <Link href="/genres" className={`nav-link ${pathname === '/genres' ? 'text-amber-500' : 'text-white hover:text-amber-600'}`}>
             Genres
           </Link>
-          <Link href="/schedule" className={`nav-link ${pathname === '/schedule' ? 'text-amber-400' : 'text-white hover:text-amber-300'}`}>
+          <Link href="/schedule" className={`nav-link ${pathname === '/schedule' ? 'text-amber-500' : 'text-white hover:text-amber-600'}`}>
             Schedule
           </Link>
         </div>
